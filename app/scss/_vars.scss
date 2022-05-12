@@ -1,0 +1,11 @@
+$black: #000;
+$light-black: #222;
+$gray: #555;
+$light-grey: #666;
+
+%title-font {
+    font-size: 40px;
+    line-height: 1.25;
+    font-weight: 600;
+    color: $black;
+}
