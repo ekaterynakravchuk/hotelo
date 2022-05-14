@@ -1,0 +1,37 @@
+@media (max-width: 900px) {
+    .header {
+        &__inner {
+            justify-content: space-between;
+        }
+        &__logo {
+            margin-right: 0;
+        }
+        &__menu {
+            display: none;
+            background-color: #fff;
+            position:absolute;
+            justify-content: center;
+            top: 100%;
+            width: 100%;
+            margin: 0 -15px;
+            box-shadow: 0px 8px 10px rgb(0 0 0 / 14%);
+            padding-bottom: 20px;
+        }
+        &__menu.open {
+            display: flex;
+        }
+        &__menu-list {
+            flex-direction: column;
+        }
+        &__menu-item {
+            margin-bottom: 15px;
+        }
+        &__menu-item + .header__menu-item {
+            margin-left: 0;
+        }
+        &__burger {
+            display: block;
+            order: -1;
+        }
+    }
+}

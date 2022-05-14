@@ -5,6 +5,12 @@
 @import 'global';
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
     &__inner {
         padding: 40px 0;
         display: flex;
@@ -19,6 +25,7 @@
     }
     &__menu {
         margin-right: 108px;
+        display: flex;
     }
     &__menu-list {
         display: flex;
@@ -31,6 +38,45 @@
         transition: all .3s;
         &:hover {
             color: #999; 
+        }
+    }
+    &__burger {
+        display: none;
+        width: 44px;
+        height: 27px;
+        padding: 4px;
+        margin: 5px;
+        position: relative;
+        & span {
+            width: 36px;
+            height: 3px;
+            background-color: $black;
+            display: block;
+            margin: 4px 0;
+            border-radius: 3px;
+            position: absolute;
+            transition: all .2s linear;
+        }
+        & span:first-child {
+            top: 0;
+            left: -2px;
+        }
+        & span:nth-child(2) {
+            top: 8px;
+            right: 2px;
+        }
+        & span:last-child {
+            bottom: 0;
+            left: -2px;
+        }
+        &:hover span:first-child {
+            left: 0;
+        }
+        &:hover span:last-child {
+            left: 0;
+        }
+        &:hover span:nth-child(2) {
+            right: 8px;
         }
     }
     &__sign-btn {
@@ -89,9 +135,18 @@
         justify-content: space-between;
         margin-top: 40px;
     }
+    &__form-select {
+        display: inline;
+        max-width: 218px;
+        width: 100%;
+    }
     &__form-date,
     &__form-people {
+        display: inline;
         max-width: 218px;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
     }
     &__form-country {
         flex-grow: 1;
@@ -104,8 +159,11 @@
         padding: 12px 12px 12px 54px;
         border: none;
         background-size: 24px 24px;
-        background-position: 15px 13px;
+        background-position: 15px 15px;
         background-repeat: no-repeat;
+        font-size: 24px;
+        line-height: 1;
+        color: $light-black;
         &::placeholder {
             font-size: 24px;
             color: $light-black;
