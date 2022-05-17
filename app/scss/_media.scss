@@ -86,4 +86,505 @@
             order: -1;
         }
     }
+    .booking {
+        &__form {
+            max-width: 350px;
+            padding: 30px 20px;
+        }
+        &__form-line1 {
+            flex-wrap: wrap;
+        }
+        &__form-line2 {
+            margin-top: 0;
+            flex-wrap: wrap;
+        }
+        &__form-date,
+        &__select-btn,
+        &__form-select,
+        &__select-country {
+            max-width: none;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        &__form-select {
+            margin-bottom: 0;
+        }
+        &__form-btn {
+            width: 100%;
+            & img {
+                margin: 0 auto;
+            }
+        }
+    }
+    .facilities {
+        &__row {
+            justify-content: space-around;
+        }
+        &__col {
+            width: 50%;
+        }
+    }
+    .partners {
+        &__inner {
+            justify-content: space-between;
+        }
+        &__item {
+            margin: 0 10px;
+        }
+    }
+    .reviews {
+        &__item-info {
+            padding: 21px 35px;
+        }
+        &__text {
+            font-size: 24px;
+        }
+    }
+    .location {
+        &__nav {
+            margin-bottom: 20px;
+        }
+        &__list {
+            margin-left: -10px;
+        }
+        &__list-item {
+            margin: 0px 10px;
+        }
+        &__list-btn {
+            padding: 4px 14px;
+            font-size: 14px;
+        }
+        &__item-info {
+            padding: 10px;
+        }
+    }
+    .contacts {
+        &__info {
+            padding: 30px 35px 33px;
+        }
+        &__subtitle {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 798px) {
+    %title-font {
+        font-size: 36px;
+    }
+    .header {
+        &__inner {
+            padding: 20px 0;
+        }
+    }
+    .booking {
+        &__inner {
+            padding-bottom: 80px;
+        }
+        &__title {
+            font-size: 36px;
+        }
+        &__subtitle {
+            font-size: 16px;
+        }
+        &__form {
+            padding: 15px;
+            max-width: 280px;
+        }
+        &__form-date,
+        &__select-btn,
+        &__select-country {
+            font-size: 16px;
+            padding: 10px 10px 10px 42px;
+            background-size: 18px 18px;
+            background-position: 15px 10px;
+        }
+        &__form-list {
+            top: 50px;
+        }
+        &__form-item {
+            padding: 10px 10px 10px 42px;
+            font-size: 16px;
+            &:last-child {
+                padding-bottom: 15px;
+            }
+        }
+        &__form-btn {
+            padding: 8px;
+        }
+        &__item:first-child::after {
+            bottom: 15px;
+            font-size: 24px;
+        }
+    }
+    .facilities {
+        &__inner {
+            padding-bottom: 80px;
+        }
+        &__title-box {
+            max-width: 495px;
+        }
+    }
+    .about {
+        &__inner {
+            grid-column-gap: 30px;
+            padding-bottom: 80px;
+        }
+        &__item-title {
+            margin-bottom: 0;
+        }
+    }
+    .partners {
+        &__inner {
+            padding-bottom: 80px;
+            justify-content: center;
+        }
+        &__item {
+            width: 50%;
+            max-width: 150px;
+        }
+    }
+    .reviews {
+        &__inner {
+            padding-bottom: 80px;
+        }
+        &__item-info {
+            padding: 15px 15px 15px 25px;
+        }
+    }
+    .location {
+        &__inner {
+            margin-bottom: 80px;
+        }
+        &__row {
+            justify-content: center;
+        }
+        &__col {
+            width: 45%;
+        }
+    }
+    .contacts {
+        padding-bottom: 80px;
+        &__info {
+            padding: 15px;
+        }
+    }
+    .footer {
+        &__inner {
+            padding-bottom: 35px;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .wrapper {
+        padding-top: 80px;
+    }
+    %title-font {
+        font-size: 32px;
+    }
+    .booking {
+        &__info-box {
+            flex-wrap: wrap;
+        }
+        &__title-box {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        &__title {
+            margin-bottom: 15px;
+            font-size: 32px;
+        }
+        &__subtitle {
+            max-width: 100%;
+        }
+        &__form {
+            margin: 0 auto;
+        }
+        &__items {
+            grid-gap: 10px;
+        }
+        &__item-img {
+            border-radius: 10px;
+        }
+    }
+    .facilities {
+        &__title-box {
+            max-width: 375px;
+        }
+    }
+    .about {
+        &__inner {
+            grid-template-rows: repeat(300px, 1fr);
+            grid-template-columns: 100%;
+            grid-row-gap: 20px;
+        }
+        &__img {
+            max-height: 300px;
+        }
+        &__info {
+            display: flex;
+            flex-direction: column;
+        }
+        &__info-title {
+            margin-bottom: 15px;
+            max-width: 100%
+        }
+        &__info-text {
+            margin-bottom: 20px;
+        }
+        &__items {
+            margin: 0 -10px 45px;
+            justify-content: center;
+        }
+        &__item {
+            margin: 0 10px 10px;
+            width: 20%;
+        }
+        &__info-link {
+            align-self: center;
+        }
+    }
+    .reviews {
+        &__author {
+            margin-bottom: 10px;
+        }
+        &__author-img {
+            margin-bottom: 5px;
+        }
+        &__text {
+            font-size: 20px;
+        }
+    }
+    .viewAll__link {
+        margin-bottom: 10px;
+    }
+    .location {
+        &__nav {
+            flex-wrap: wrap;
+        }
+        &__list {
+            margin-bottom: 10px;
+        }
+    }
+    .contacts {
+        &__title {
+            font-size: 24px;
+        }
+    }
+    .footer {
+        &__inner {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        &__info {
+            max-width: none;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        &__text {
+            text-align: center;
+        }
+        &__list-box {
+            text-align: center;
+        }
+    }
+}
+
+@media(max-width: 575px) {
+    .booking {
+        &__item:first-child::after {
+            font-size: 14px;
+        }
+    }
+    .facilities {
+        &__top {
+            flex-wrap: wrap;
+        }
+        &__title-box {
+            margin-bottom: 10px;
+        }
+    }
+    .about {
+        &__items {
+            margin-bottom: 30px;
+        }
+        &__item {
+            width: 35%;
+        }
+        &__item-title {
+            font-size: 18px;
+        }
+        &__item-text {
+            font-size: 14px;
+        }
+        &__info-link {
+            padding: 10px 32px;
+        }
+    }
+    .location {
+        &__col {
+            width: 80%;
+        }
+    }
+    .contacts {
+        &__img {
+            display: none;
+        }
+        &__info {
+            text-align: center;
+        }
+        &__form {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 505px) {
+    .booking {
+        &__form {
+            max-width: 95%;
+        }
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 2fr, 1fr;
+        }
+        &__item:first-child {
+            grid-column: 1/3;
+        }
+    }
+    .facilities {
+        &__top {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__title-box {
+            text-align: center;
+        }
+        &__col {
+            width: 100%;
+            max-width: none;
+        }
+    }
+    .about {
+        &__info {
+            text-align: center;
+        }
+    }
+    .reviews {
+        &__item {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+        }
+        &__item-img img {
+            border-radius: 12px 12px 0 0;
+        }
+    }
+    .slick-dots {
+        bottom: 25px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .location {
+        &__title,
+        &__subtitle {
+            text-align: center;
+        }
+        &__list {
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-around;
+        }
+        &__col {
+            width: 100%;
+        }
+        &__list-btn {
+            margin-bottom: 10px;
+        }
+        &__item-info {
+            padding: 25px;
+        }
+    }
+    .contacts {
+        &__form-email {
+            padding: 7px 150px 7px 26px;
+        }
+        &__form-btn {
+            padding: 9px 14px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 410px) {
+    .header {
+        &__sign-btn {
+            padding: 5px 15px;
+        }
+    }
+    .booking {
+        &__inner {
+            padding: 30px 0 40px;
+        }
+    }
+    .facilities {
+        &__inner {
+            padding-bottom: 40px;
+        }
+        &__img {
+            margin-bottom: 20px;
+        }
+    }
+    .about {
+        &__inner {
+            padding-bottom: 40px;
+        }
+    }
+    .partners {
+        &__inner {
+            padding-bottom: 40px;
+        }
+    }
+    .reviews {
+        &__inner {
+            padding-bottom: 40px;
+        }
+    }
+    .location {
+        &__inner {
+            margin-bottom: 40px;
+        }
+        &__nav,
+        &__list {
+            justify-content: center;
+        }
+    }
+    .contacts {
+        padding-bottom: 40px;
+        &__title {
+            font-size: 18px;
+        }
+        &__subtitle {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        &__form-email {
+            padding: 7px 15px;
+        }
+        &__form-btn {
+            position: initial;
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+    .footer {
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 }

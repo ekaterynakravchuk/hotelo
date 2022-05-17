@@ -503,6 +503,7 @@
         height: 100%;
         max-height: 320px;
         object-fit: cover;
+        border-radius: 16px 16px 0 0;
     }
     &__item-info {
         border-radius: 0 0 16px 16px;
