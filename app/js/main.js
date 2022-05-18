@@ -64,13 +64,14 @@ document.querySelectorAll('.booking__form-select').forEach(function (selectWrapp
     openList.classList.toggle('open');
   });
   // select lict close
-  openItems.forEach(function (formItem) {
-    formItem.addEventListener('click', function () {
-      openBtn.innerText = this.innerText;
-      openList.classList.remove('open');
-      hiddenInput.value = this.dataset.value;
-    });
-  });
+  openList.addEventListener('click', function(e) {
+		const item = e.target.closest('li.booking__form-item')
+		if(item) {
+			openBtn.innerText = item.innerText;
+    	openList.classList.remove('open');
+    	hiddenInput.value = item.dataset.value;
+		}
+	});
   // select list close outside
   document.addEventListener('click', function (e) {
     if (e.target != openBtn) {
@@ -81,14 +82,14 @@ document.querySelectorAll('.booking__form-select').forEach(function (selectWrapp
 
 // select country list
 
-const countryList = document.querySelector('.booking__select-country');
+const countryList = document.querySelector('.booking__form-list.country');
 
 fetch('https://restcountries.com/v3.1/all').then(res => {
   return res.json();
 }).then(data => {
   let output = '';
   data.forEach(country => {
-    output += `<option class="booking__form-item" value="${country.name.common}">${country.name.common}</option>`;
+    output += `<li class="booking__form-item" data-value="${country.name.common}">${country.name.common}</li>`;
     countryList.innerHTML = output;
   });
 }).catch(err => {

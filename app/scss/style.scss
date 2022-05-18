@@ -140,6 +140,11 @@
         max-width: 218px;
         width: 100%;
         position: relative;
+        &.country {
+            max-width: 404px;
+            width: 100%;
+            flex-grow: 1;
+        }
     }
     &__form-list {
         display: none;
@@ -156,6 +161,10 @@
         box-shadow: 0 0 15px rgb(0 0 0 / 10%);
         &.open {
             display: block;
+        }
+        &.country {
+            max-height: 400px;
+            overflow-y: scroll;
         }
     }
     &__hidden-input {
@@ -186,8 +195,7 @@
         text-align: left;
     }
     &__form-date,
-    &__select-btn,
-    &__select-country {
+    &__select-btn {
         background-color: #FAFAFA;
         border-radius: 8px;
         padding: 12px 12px 12px 54px;
@@ -203,11 +211,6 @@
             outline: none;
             border: 1px solid #999;
         }
-        &::placeholder {
-            font-size: 24px;
-            color: $light-black;
-            transform: translateY(3px);
-        }
     }
     &__form-date {
         background-image: url(../images/calendar.svg);
@@ -215,15 +218,10 @@
     &__select-btn.people {
         background-image: url(../images/person.svg);
     }
-    &__select-country {
+    &__select-btn.country {
         background-image: url(../images/pin.svg);
-        max-width: 404px;
         width: 100%;
-        flex-grow: 1;
-        appearance: none;
-        & .booking__form-item {
-            font-size: 18px;
-        }
+        max-width: 100%;
     }
     &__form-btn {
         background-color: #3771C8;
